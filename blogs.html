@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header>
+  <nav class="navbar">
+
+    <!-- Left Section -->
+  <div class="logo-area">
+  <img src="image/logo.png" alt="Logo" class="logo">
+  <span class="company-name">Tech Company</span>
+</div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" placeholder="Search For">
+      <button class="search-btn">🔍</button>
+    </div>
+
+    <!-- Right Icons + Button -->
+    <div class="nav-actions">
+     <span class="icon"><i class="fa fa-shopping-cart"></i></span>
+<span class="icon"><i class="fa fa-bell"></i></span>
+      <button id="authBtn" class="auth-btn">Register</button>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </nav>
+<!-- Register Popup -->
+<div id="registerPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('registerPopup')">&times;</span>
+    <h2>Create Account</h2>
+    <form id="registerForm">
+      <input type="text" id="regName" placeholder="Full Name" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPass" placeholder="Password" required>
+      <button type="submit" class="popup-btn">Register</button>
+    </form>
+  </div>
+</div>
+
+<!-- Login Popup -->
+<div id="loginPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('loginPopup')">&times;</span>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPass" placeholder="Password" required>
+      <button type="submit" class="popup-btn">Login</button>
+    </form>
+  </div>
+</div>
+
+
+
+  <!-- Nav Links -->
+<ul class="nav-links" id="navLinks">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="about.html" >About Us</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li><a href="service.html">Service</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blogs.html"class="active">Blogs</a></li>
+</ul>
+</header>
+<br><br><br><br><br><br><br><br>
+<h1 style="text-align: left;font-size: 52px;">Blogs</h1><br><br><br>
+
+
+<div class="feature-box">
+    <div class="feature-left">
+      <div class="circle-card">
+        <img src="image/Ellipse 85.png" alt="Hardware Image">
+        </div>
+    </div>
+
+    <div class="feature-right">
+        <h2>Hardware Meets Elegance</h2>
+
+        <p><strong style="color: black;">Performance:</strong> Powered by the Snapdragon 8 Elite, backed with up to 16GB of RAM and 1TB of storage, this foldable offers flagship-level performance.</p>
+
+        <p><strong style="color: black;">Displays:</strong> A vibrant 7-inch poled main screen refreshes at 165Hz, while a 4.5-inch cover screen offers quick access to apps.</p>
+
+        <p><strong style="color: black;">Design:</strong> Meticulous details like vegan leather, Alcantara finishes, and a titanium hinge give it a luxe yet durable feel. Plus, it’s IP48 rated for water and dust resistance.</p>
+    </div>
+</div>
+<div class="feature-box">
+    <div class="feature-left">
+      <div class="circle-card">
+        <img src="image/Ellipse 86.png" alt="Hardware Image">
+        </div>
+    </div>
+
+    <div class="feature-right">
+        <h2>Smart Features Go Mainstream</h2>
+
+        <p>Motorola packs the Razr Ultra with powerful AI features. Moto AI, Google<br>
+        Gemiini, Meta AI, and Perplexity tols are onboard, delivering features like <br>
+      Look & Talk, Image Studio, and Playlist Studio</p>
+
+        
+        
+    </div>
+</div>
+<br>
+<div class="feature-box">
+    <div class="feature-left">
+      <div class="circle-card">
+        <img src="image/Ellipse 87.png" alt="Hardware Image">
+        </div>
+    </div>
+
+    <div class="feature-right">
+        <h2>Camera That Sees Clearly</h2>
+
+        <p>The camera setup includes three 50 MP lenses, fine-tuned with Pantone color<br>
+        accurac. Ai-enhanced modes-like Group Shot and Action Shot-add<br>
+      versatility to your photography toolkit.</p>
+
+        
+        
+    </div>
+</div>
+<br>
+<div class="feature-box">
+    <div class="feature-left">
+      <div class="circle-card">
+        <img src="image/Ellipse 88.png" alt="Hardware Image">
+        </div>
+    </div>
+
+    <div class="feature-right">
+        <h2>Power & Privilege</h2>
+
+        <p><strong style="color: black;">Charging:</strong> Fast charging is supported - 68W wired and 30W wireless_but<br>do note:the charger isnt included.</p>
+
+        <p><strong style="color: black;">Updates:</strong> Software support is modest:just three years of updates,which<br>lags behind industry leaders.</p>
+
+       
+    </div>
+</div>
+<br>
+<br><br><br><br><br><br><br><br>
+<footer class="footer">
+    <div class="footer-top">
+
+        <!-- Logo + Company -->
+        <div class="footer-brand">
+            <img src="image/logo.png" alt="Logo">
+            <h2>Tech Company</h2>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-column">
+            <h3>Company</h3>
+            <p>About US</p><br>
+            <p>Services</p><br>
+            <p>Community</p><br>
+            <p>Testimonial</p><br>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+            <h3>Support</h3>
+            <p>Help Center</p><br>
+            <p>Webians</p><br>
+            <p>Feedback</p><br>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-column">
+            <h3>Links</h3>
+            <p>Course</p><br>
+            <p>Service</p><br>
+            <p>All in ond</p><br>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>Contact US</h3>
+            <p><i class="fa fa-phone"></i> +917789879034</p><br>
+            <p><i class="fa fa-envelope"></i> nazer2000@gmail</p><br>
+        </div>
+
+    </div>
+
+    <!-- Social Icons -->
+  <div class="footer-social">
+    <img src="image/google.jpg" alt="Google">
+    <img src="image/twitter-removebg-preview (2).png" alt="Twitter">
+    <img src="image/linkedin-removebg-preview (1).png" alt="LinkedIn">
+    <img src="image/facebook.png" alt="Facebook">
+</div>
+</footer>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

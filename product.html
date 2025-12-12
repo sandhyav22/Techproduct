@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header>
+  <nav class="navbar">
+
+    <!-- Left Section -->
+  <div class="logo-area">
+  <img src="image/logo.png" alt="Logo" class="logo">
+  <span class="company-name">Tech Company</span>
+</div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" placeholder="Search For">
+      <button class="search-btn">🔍</button>
+    </div>
+
+    <!-- Right Icons + Button -->
+    <div class="nav-actions">
+     <span class="icon"><i class="fa fa-shopping-cart"></i></span>
+<span class="icon"><i class="fa fa-bell"></i></span>
+      <button id="authBtn" class="auth-btn">Register</button>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </nav>
+<!-- Register Popup -->
+<div id="registerPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('registerPopup')">&times;</span>
+    <h2>Create Account</h2>
+    <form id="registerForm">
+      <input type="text" id="regName" placeholder="Full Name" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPass" placeholder="Password" required>
+      <button type="submit" class="popup-btn">Register</button>
+    </form>
+  </div>
+</div>
+
+<!-- Login Popup -->
+<div id="loginPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('loginPopup')">&times;</span>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPass" placeholder="Password" required>
+      <button type="submit" class="popup-btn">Login</button>
+    </form>
+  </div>
+</div>
+
+
+
+  <!-- Nav Links -->
+<ul class="nav-links" id="navLinks">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="about.html" >About Us</a></li>
+    <li><a href="product.html" class="active">Product</a></li>
+    <li><a href="service.html">Service</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
+</ul>
+</header>
+<br><br><br><br><br><br><br><br>
+<h1 style="font-size: 46px;">Categories</h1>
+
+<div class="product-container">
+
+    <div class="product-card">
+        <img src="image/Rectangle 196.png" onclick="window.location.href='products.html'" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Mobile</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 197.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Laptop</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 198.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Tablet</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="product-container">
+
+    <div class="product-card">
+        <img src="image/Rectangle 199.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Headphones</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 288.png" onclick="window.location.href='products.html'"class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Refrigerator</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 201.png" onclick="window.location.href='products.html'" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Washing Machine</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="product-container">
+
+    <div class="product-card">
+        <img src="image/Rectangle 202.png" onclick="window.location.href='products.html'" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Watch</h3>
+            <p class="product-price">$ 2000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 203.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Game Mauves</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 204.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">R Vaccum Cleaner</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="product-container">
+
+    <div class="product-card">
+        <img src="image/Rectangle 205.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Microwaves</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 206.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Coffee Maker</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 207.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Dishwasher</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="product-container">
+
+    <div class="product-card">
+        <img src="image/Rectangle 208.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Cool Ac</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 209.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Big Bluetooth Speaker</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 210.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Power bank</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="product-container">
+
+    <div class="product-card">
+        <img src="image/Rectangle 211.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Air Buds</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 200.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">CCTV Camera</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image/Rectangle 212.png" class="product-img">
+
+        <div class="row-between">
+            <h3 class="product-name">Monitor</h3>
+            <p class="product-price">$ 35000</p>
+        </div>
+
+        <div class="row-between card-bottom">
+            <button class="buy-btn">Buy Now</button>
+
+            <div class="stars">
+                ★★★★☆ 
+            </div>
+        </div>
+    </div>
+
+</div>
+<br>
+<footer class="footer">
+    <div class="footer-top">
+
+        <!-- Logo + Company -->
+        <div class="footer-brand">
+            <img src="image/logo.png" alt="Logo">
+            <h2>Tech Company</h2>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-column">
+            <h3>Company</h3>
+            <p>About US</p><br>
+            <p>Services</p><br>
+            <p>Community</p><br>
+            <p>Testimonial</p><br>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+            <h3>Support</h3>
+            <p>Help Center</p><br>
+            <p>Webians</p><br>
+            <p>Feedback</p><br>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-column">
+            <h3>Links</h3>
+            <p>Course</p><br>
+            <p>Service</p><br>
+            <p>All in ond</p><br>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>Contact US</h3>
+            <p><i class="fa fa-phone"></i> +917789879034</p><br>
+            <p><i class="fa fa-envelope"></i> nazer2000@gmail</p><br>
+        </div>
+
+    </div>
+
+    <!-- Social Icons -->
+  <div class="footer-social">
+    <img src="image/google.jpg" alt="Google">
+    <img src="image/twitter-removebg-preview (2).png" alt="Twitter">
+    <img src="image/linkedin-removebg-preview (1).png" alt="LinkedIn">
+    <img src="image/facebook.png" alt="Facebook">
+</div>
+</footer>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

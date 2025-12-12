@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header>
+  <nav class="navbar">
+
+    <!-- Left Section -->
+  <div class="logo-area">
+  <img src="image/logo.png" alt="Logo" class="logo">
+  <span class="company-name">Tech Company</span>
+</div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" placeholder="Search For">
+      <button class="search-btn">🔍</button>
+    </div>
+
+    <!-- Right Icons + Button -->
+    <div class="nav-actions">
+     <span class="icon"><i class="fa fa-shopping-cart"></i></span>
+<span class="icon"><i class="fa fa-bell"></i></span>
+      <button id="authBtn" class="auth-btn">Register</button>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </nav>
+<!-- Register Popup -->
+<div id="registerPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('registerPopup')">&times;</span>
+    <h2>Create Account</h2>
+    <form id="registerForm">
+      <input type="text" id="regName" placeholder="Full Name" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPass" placeholder="Password" required>
+      <button type="submit" class="popup-btn">Register</button>
+    </form>
+  </div>
+</div>
+
+<!-- Login Popup -->
+<div id="loginPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('loginPopup')">&times;</span>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPass" placeholder="Password" required>
+      <button type="submit" class="popup-btn">Login</button>
+    </form>
+  </div>
+</div>
+
+
+
+  <!-- Nav Links -->
+<ul class="nav-links" id="navLinks">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="about.html" >About Us</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li><a href="service.html"class="active">Service</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
+</ul>
+</header>
+<br><br><br><br><br><br><br><br>
+<h1 style="text-align: center;font-size: 52px;">Service</h1><br><br><br>
+<p style="text-align: center;font-size: 42px; font-weight: 600;">We Provide More Than High - Tech Product</p><br><br><br>
+<div class="Flex-Section">
+    <div class="flex-left1">
+        <img src="image/Ellipse 83.png" alt="Sample Image">
+    </div>
+
+    <div class="flex-right1">
+        <h2>Life Time Guarantee</h2>
+        <p>
+         1. Lifetime software security updates<br>
+         2. Free repairs for manufacturing defects in <br>
+         electrical parts<br>
+         3. Free technician visits for qualified issues
+        </p>
+    </div>
+</div>
+<br>
+<div class="Flex-Section1">
+    <div class="flex-left1">
+        <img src="image/Ellipse 80.png" alt="Sample Image">
+    </div>
+
+    <div class="flex-right1">
+        <h2>Good Price</h2>
+        <p>
+        Looking for the best deals on the gadgets and<br>
+        appliances you rely on every day? We've got<br>
+        you covered with high - performance tech at <br>
+        budget-friendly prices!
+        </p>
+    </div>
+</div>
+<br>
+
+<div class="Flex-Section2">
+    <div class="flex-left1">
+        <img src="image/Ellipse 81.png" alt="Sample Image">
+    </div>
+
+    <div class="flex-right1">
+        <h2>Free Software updates</h2>
+        <p>
+         1. Regular security patches, performance boosts<br>
+         new features.<br>
+         2. Stay up-to-date with the latest AI cooling<br>
+         algorithms<br>
+         3. Improved wash cycle optimization
+        </p>
+    </div>
+</div>
+<br>
+<div class="Flex-Section3">
+    <div class="flex-left1">
+        <img src="image/Ellipse 82.png" alt="Sample Image">
+    </div>
+
+    <div class="flex-right1">
+        <h2>24/7 Support System</h2>
+        <p>
+        We don't just sell technology - we stand by it.<br>
+        Our Product Support System is designed to <br>
+        deliver seamless, long-term assitance across<br>
+        your entire smart home ecosystem.
+        </p>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br>
+<footer class="footer">
+    <div class="footer-top">
+
+        <!-- Logo + Company -->
+        <div class="footer-brand">
+            <img src="image/logo.png" alt="Logo">
+            <h2>Tech Company</h2>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-column">
+            <h3>Company</h3>
+            <p>About US</p><br>
+            <p>Services</p><br>
+            <p>Community</p><br>
+            <p>Testimonial</p><br>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+            <h3>Support</h3>
+            <p>Help Center</p><br>
+            <p>Webians</p><br>
+            <p>Feedback</p><br>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-column">
+            <h3>Links</h3>
+            <p>Course</p><br>
+            <p>Service</p><br>
+            <p>All in ond</p><br>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>Contact US</h3>
+            <p><i class="fa fa-phone"></i> +917789879034</p><br>
+            <p><i class="fa fa-envelope"></i> nazer2000@gmail</p><br>
+        </div>
+
+    </div>
+
+    <!-- Social Icons -->
+  <div class="footer-social">
+    <img src="image/google.jpg" alt="Google">
+    <img src="image/twitter-removebg-preview (2).png" alt="Twitter">
+    <img src="image/linkedin-removebg-preview (1).png" alt="LinkedIn">
+    <img src="image/facebook.png" alt="Facebook">
+</div>
+</footer>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

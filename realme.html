@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realme</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    /* Section */
+.realme-section {
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Product container */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+/* Product card */
+.product-card {
+    background: #e6e6e6;
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* Text */
+.product-name {
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+/* Actions row */
+.actions-row {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Colors */
+.colors {
+    display: flex;
+    gap: 6px;
+}
+
+.color {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+/* Example colors */
+.c1 { background: #254f75; }
+.c2 { background: #4bb0c1; }
+.c3 { background: #1b1b1b; }
+.c4 { background: #a17363; }
+.c5 {background: #f0b30d;}
+.c6 {background: rgb(230, 83, 30);}
+.c7 {background: red}
+.c8 {background: rgb(221, 166, 212)}
+.c9 {background: #ebc9be;}
+.c10 {background: white;}
+/* Add to cart */
+.cart-btn {
+    background: #ffcf05;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .section-title {
+        font-size: 34px;
+    }
+
+    .cart-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+    <header>
+  <nav class="navbar">
+
+    <!-- Left Section -->
+  <div class="logo-area">
+  <img src="image/logo.png" alt="Logo" class="logo">
+  <span class="company-name">Tech Company</span>
+</div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" placeholder="Search For">
+      <button class="search-btn">🔍</button>
+    </div>
+
+    <!-- Right Icons + Button -->
+    <div class="nav-actions">
+     <span class="icon"><i class="fa fa-shopping-cart"></i></span>
+<span class="icon"><i class="fa fa-bell"></i></span>
+      <button id="authBtn" class="auth-btn">Register</button>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </nav>
+<!-- Register Popup -->
+<div id="registerPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('registerPopup')">&times;</span>
+    <h2>Create Account</h2>
+    <form id="registerForm">
+      <input type="text" id="regName" placeholder="Full Name" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPass" placeholder="Password" required>
+      <button type="submit" class="popup-btn">Register</button>
+    </form>
+  </div>
+</div>
+
+<!-- Login Popup -->
+<div id="loginPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('loginPopup')">&times;</span>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPass" placeholder="Password" required>
+      <button type="submit" class="popup-btn">Login</button>
+    </form>
+  </div>
+</div>
+
+
+
+  <!-- Nav Links -->
+<ul class="nav-links" id="navLinks">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="about.html" >About Us</a></li>
+    <li><a href="product.html"class="active">Product</a></li>
+    <li><a href="service.html">Service</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
+</ul>
+</header>
+<br><br><br><br><br><br><br><br>
+<div class="realme-section">
+    <h2 class="section-title">Realme</h2>
+
+    <div class="product-container">
+
+        <!-- Product Card -->
+        <div class="product-card">
+            <img src="image/Rectangle 245.png" class="product-img" alt="">
+            <h3 class="product-name">Realme C73</h3>
+            <p class="product-price">$14000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c1"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Duplicate card (change info) -->
+        <div class="product-card">
+            <img src="image/Rectangle 246.png" class="product-img" alt="">
+            <h3 class="product-name">Realme Narzo 80</h3>
+            <p class="product-price">$9000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c4"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+
+              <div class="product-card">
+            <img src="image/Rectangle 247.png" class="product-img" alt="">
+            <h3 class="product-name">Realme C73</h3>
+            <p class="product-price">$14000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c1"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Duplicate card (change info) -->
+        <div class="product-card">
+            <img src="image/Rectangle 248.png" class="product-img" alt="">
+            <h3 class="product-name">Realme Narzo 80</h3>
+            <p class="product-price">$9000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c4"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+  
+
+    </div>
+
+
+
+
+
+
+        <div class="product-container">
+
+        <!-- Product Card -->
+        <div class="product-card">
+            <img src="image/Rectangle 256.png" class="product-img" alt="">
+            <h3 class="product-name">Realme P3</h3>
+            <p class="product-price">$16500</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c1"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn"onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Duplicate card (change info) -->
+        <div class="product-card">
+            <img src="image/Rectangle 257.png" class="product-img" alt="">
+            <h3 class="product-name">Realme P1</h3>
+            <p class="product-price">$17000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c4"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+
+              <div class="product-card">
+            <img src="image/Rectangle 258.png" class="product-img" alt="">
+            <h3 class="product-name">Realme 15 Pro</h3>
+            <p class="product-price">$34000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c4"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Duplicate card (change info) -->
+        <div class="product-card">
+            <img src="image/Rectangle 259.png" class="product-img" alt="">
+            <h3 class="product-name">Narzo 70</h3>
+            <p class="product-price">$17000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c4"></span>
+                    <span class="color c2"></span>
+                    <span class="color c5"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+  
+
+    </div>
+
+
+
+        <div class="product-container">
+
+        <!-- Product Card -->
+        <div class="product-card">
+            <img src="image/Rectangle 254.png" class="product-img" alt="">
+            <h3 class="product-name">Realme GT7 Pro</h3>
+            <p class="product-price">$46500</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c6"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Duplicate card (change info) -->
+        <div class="product-card">
+            <img src="image/Rectangle 260.png" class="product-img" alt="">
+            <h3 class="product-name">Realme 14X</h3>
+            <p class="product-price">$28000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c7"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+
+              <div class="product-card">
+            <img src="image/Rectangle 291.png" class="product-img" alt="">
+            <h3 class="product-name">Realme Gt 6T</h3>
+            <p class="product-price">$28000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c8"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Duplicate card (change info) -->
+        <div class="product-card">
+            <img src="image/Rectangle 292.png" class="product-img" alt="">
+            <h3 class="product-name">Realme P3x</h3>
+            <p class="product-price">$13000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c9"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+  
+
+    </div>
+
+
+
+
+
+
+        <div class="product-container">
+
+        <!-- Product Card -->
+        <div class="product-card">
+            <img src="image/Rectangle 285.png" class="product-img" alt="">
+            <h3 class="product-name">Realme GT6</h3>
+            <p class="product-price">$30000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c1"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Duplicate card (change info) -->
+        <div class="product-card">
+            <img src="image/Rectangle 293.png" class="product-img" alt="">
+            <h3 class="product-name">Realme C71</h3>
+            <p class="product-price">$11000</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c4"></span>
+                    <span class="color c2"></span>
+                    <span class="color c10"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+
+              <div class="product-card">
+            <img src="image/Rectangle 286.png" class="product-img" alt="">
+            <h3 class="product-name">Realme GT 7T</h3>
+            <p class="product-price">$34999</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c1"></span>
+                    <span class="color c2"></span>
+                    <span class="color c3"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Duplicate card (change info) -->
+        <div class="product-card">
+            <img src="image/Rectangle 294.png" class="product-img" alt="">
+            <h3 class="product-name">Realme </h3>
+            <p class="product-price">$35990</p>
+
+            <div class="actions-row">
+                <div class="colors">
+                    <span class="color c4"></span>
+                    <span class="color c2"></span>
+                    <span class="color c10"></span>
+                </div>
+                <button class="cart-btn" onclick="window.location.href='cart.html'">Add To Cart</button>
+            </div>
+        </div>
+  
+
+    </div>
+</div>
+
+
+
+
+
+<br>
+<footer class="footer">
+    <div class="footer-top">
+
+        <!-- Logo + Company -->
+        <div class="footer-brand">
+            <img src="image/logo.png" alt="Logo">
+            <h2>Tech Company</h2>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-column">
+            <h3>Company</h3>
+            <p>About US</p><br>
+            <p>Services</p><br>
+            <p>Community</p><br>
+            <p>Testimonial</p><br>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+            <h3>Support</h3>
+            <p>Help Center</p><br>
+            <p>Webians</p><br>
+            <p>Feedback</p><br>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-column">
+            <h3>Links</h3>
+            <p>Course</p><br>
+            <p>Service</p><br>
+            <p>All in ond</p><br>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>Contact US</h3>
+            <p><i class="fa fa-phone"></i> +917789879034</p><br>
+            <p><i class="fa fa-envelope"></i> nazer2000@gmail</p><br>
+        </div>
+
+    </div>
+
+    <!-- Social Icons -->
+  <div class="footer-social">
+    <img src="image/google.jpg" alt="Google">
+    <img src="image/twitter-removebg-preview (2).png" alt="Twitter">
+    <img src="image/linkedin-removebg-preview (1).png" alt="LinkedIn">
+    <img src="image/facebook.png" alt="Facebook">
+</div>
+</footer>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

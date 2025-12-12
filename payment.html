@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    .payment-box {
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.payment-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.payment-section {
+    margin-top: 10px;
+}
+
+.payment-section.hidden {
+    display: none;
+}
+
+.payment-section input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.pay-btn {
+    width: 100%;
+    padding: 14px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.verify-btn {
+    padding: 10px 15px;
+    background: green;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+.error {
+    color: red;
+    font-size: 14px;
+    margin: -5px 0 10px 2px;
+}
+
+
+</style>
+</head>
+<body>
+
+    <header>
+  <nav class="navbar">
+
+    <!-- Left Section -->
+  <div class="logo-area">
+  <img src="image/logo.png" alt="Logo" class="logo">
+  <span class="company-name">Tech Company</span>
+</div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" placeholder="Search For">
+      <button class="search-btn">🔍</button>
+    </div>
+
+    <!-- Right Icons + Button -->
+    <div class="nav-actions">
+     <span class="icon"><i class="fa fa-shopping-cart"></i></span>
+<span class="icon"><i class="fa fa-bell"></i></span>
+      <button id="authBtn" class="auth-btn">Register</button>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </nav>
+<!-- Register Popup -->
+<div id="registerPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('registerPopup')">&times;</span>
+    <h2>Create Account</h2>
+    <form id="registerForm">
+      <input type="text" id="regName" placeholder="Full Name" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPass" placeholder="Password" required>
+      <button type="submit" class="popup-btn">Register</button>
+    </form>
+  </div>
+</div>
+
+<!-- Login Popup -->
+<div id="loginPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('loginPopup')">&times;</span>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPass" placeholder="Password" required>
+      <button type="submit" class="popup-btn">Login</button>
+    </form>
+  </div>
+</div>
+
+
+
+  <!-- Nav Links -->
+<ul class="nav-links" id="navLinks">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="about.html" >About Us</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li><a href="service.html">Service</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
+</ul>
+</header>
+<br><br><br><br><br><br><br><br>
+<div class="payment-box">
+    <h2>Choose Payment Method</h2>
+
+    <div class="payment-methods">
+
+        <!-- CARD -->
+        <label class="payment-option">
+            <input type="radio" name="pay" value="card" checked onclick="showPayment('card-section')">
+            <span>💳 Credit / Debit Card</span>
+        </label>
+
+        <!-- UPI -->
+        <label class="payment-option">
+            <input type="radio" name="pay" value="upi" onclick="showPayment('upi-section')">
+            <span>📱 UPI Payment</span>
+        </label>
+
+        <!-- COD -->
+        <label class="payment-option">
+            <input type="radio" name="pay" value="cod" onclick="showPayment('cod-section')">
+            <span>💵 Cash On Delivery</span>
+        </label>
+    </div>
+
+    <!-- CARD SECTION -->
+    <!-- CARD SECTION -->
+<div id="card-section" class="payment-section">
+    <h3>Card Details</h3>
+
+    <input type="text" id="cardNumber" placeholder="Card Number" maxlength="16">
+    <p class="error" id="cardError"></p>
+
+    <div class="row">
+        <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+        <input type="password" id="cvv" placeholder="CVV" maxlength="3">
+    </div>
+    <p class="error" id="cvvError"></p>
+
+    <input type="text" id="cardName" placeholder="Card Holder Name">
+    <p class="error" id="nameError"></p>
+</div>
+
+<!-- UPI SECTION -->
+<div id="upi-section" class="payment-section hidden">
+    <h3>Enter UPI ID</h3>
+
+    <input type="text" id="upiId" placeholder="example@upi">
+    <p class="error" id="upiError"></p>
+
+    <button class="verify-btn">Verify UPI</button>
+</div>
+</div>
+<script>
+    function showPayment(id) {
+    document.querySelectorAll(".payment-section").forEach(sec => {
+        sec.classList.add("hidden");
+    });
+    document.getElementById(id).classList.remove("hidden");
+}
+
+function orderSuccess() {
+    const selected = document.querySelector("input[name='pay']:checked").value;
+
+    if (selected === "card") {
+        if (!validateCard()) return;
+    }
+
+    if (selected === "upi") {
+        if (!validateUPI()) return;
+    }
+
+    // COD needs no validation
+    window.location.href = "success.html";
+}
+
+/* CARD VALIDATION */
+function validateCard() {
+    const cardNum = document.getElementById("cardNumber").value.trim();
+    const expiry = document.getElementById("expiry").value.trim();
+    const cvv = document.getElementById("cvv").value.trim();
+    const name = document.getElementById("cardName").value.trim();
+
+    document.getElementById("cardError").textContent = "";
+    document.getElementById("cvvError").textContent = "";
+    document.getElementById("nameError").textContent = "";
+
+    let valid = true;
+
+    // Card number
+    if (!/^[0-9]{16}$/.test(cardNum)) {
+        document.getElementById("cardError").textContent = "Card number must be 16 digits";
+        valid = false;
+    }
+
+    // Expiry
+    if (!/^(0[1-9]|1[0-2])\/[0-9]{2}$/.test(expiry)) {
+        document.getElementById("cvvError").textContent = "Enter expiry in MM/YY format";
+        valid = false;
+    } else {
+        const [mm, yy] = expiry.split("/").map(Number);
+        const currentYear = Number(new Date().getFullYear().toString().slice(-2));
+        const currentMonth = new Date().getMonth() + 1;
+
+        if (yy < currentYear || (yy === currentYear && mm < currentMonth)) {
+            document.getElementById("cvvError").textContent = "Card is expired";
+            valid = false;
+        }
+    }
+
+    // CVV
+    if (!/^[0-9]{3}$/.test(cvv)) {
+        document.getElementById("cvvError").textContent = "CVV must be 3 digits";
+        valid = false;
+    }
+
+    // Name
+    if (name.length < 3) {
+        document.getElementById("nameError").textContent = "Enter a valid cardholder name";
+        valid = false;
+    }
+
+    return valid;
+}
+
+/* UPI VALIDATION */
+function validateUPI() {
+    const upi = document.getElementById("upiId").value.trim();
+    document.getElementById("upiError").textContent = "";
+
+    const upiPattern = /^[a-zA-Z0-9.\-_]{3,}@[a-zA-Z]{2,}$/;
+
+    if (!upiPattern.test(upi)) {
+        document.getElementById("upiError").textContent = "Invalid UPI ID format";
+        return false;
+    }
+
+    return true;
+}
+
+</script><br>
+<footer class="footer">
+    <div class="footer-top">
+
+        <!-- Logo + Company -->
+        <div class="footer-brand">
+            <img src="image/logo.png" alt="Logo">
+            <h2>Tech Company</h2>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-column">
+            <h3>Company</h3>
+            <p>About US</p><br>
+            <p>Services</p><br>
+            <p>Community</p><br>
+            <p>Testimonial</p><br>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+            <h3>Support</h3>
+            <p>Help Center</p><br>
+            <p>Webians</p><br>
+            <p>Feedback</p><br>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-column">
+            <h3>Links</h3>
+            <p>Course</p><br>
+            <p>Service</p><br>
+            <p>All in ond</p><br>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>Contact US</h3>
+            <p><i class="fa fa-phone"></i> +917789879034</p><br>
+            <p><i class="fa fa-envelope"></i> nazer2000@gmail</p><br>
+        </div>
+
+    </div>
+
+    <!-- Social Icons -->
+  <div class="footer-social">
+    <img src="image/google.jpg" alt="Google">
+    <img src="image/twitter-removebg-preview (2).png" alt="Twitter">
+    <img src="image/linkedin-removebg-preview (1).png" alt="LinkedIn">
+    <img src="image/facebook.png" alt="Facebook">
+</div>
+</footer>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
